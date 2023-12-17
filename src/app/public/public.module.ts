@@ -6,6 +6,9 @@ import { EvenementsComponent } from './evenements/evenements.component';
 import { ArticleComponent } from './article/article.component';
 import { PublicRoutingModule } from './public-routing.module';
 import { PlayoutComponent } from './playout/playout.component';
+import { NavBarrePlayoutComponent } from './playout/nav-barre-playout/nav-barre-playout.component';
+import { FooterPlayoutComponent } from './playout/footer-playout/footer-playout.component';
+import { LateralPlayoutComponent } from './playout/lateral-playout/lateral-playout.component';
 
 
 
@@ -16,7 +19,10 @@ import { PlayoutComponent } from './playout/playout.component';
     ContactComponent,
     EvenementsComponent,
     ArticleComponent,
-    PlayoutComponent
+    PlayoutComponent,
+    NavBarrePlayoutComponent,
+    FooterPlayoutComponent,
+    LateralPlayoutComponent
   ],
   imports: [
     CommonModule,
