@@ -4,19 +4,33 @@ import { HomeComponent } from './home/home.component';
 import { ArticleComponent } from './article/article.component';
 import { EvenementsComponent } from './evenements/evenements.component';
 import { ContactComponent } from './contact/contact.component';
+import { PlayoutComponent } from './playout/playout.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home' },
-  { path: '/home', component: HomeComponent },
-  { path: '/article', component: ArticleComponent },
-  { path: '/evenements', component: EvenementsComponent },
-  { path: '/contact', component: ContactComponent },
-  { path: '*', },
+
+  {
+    //* ici le playout pour dire qu'il y a des route enfant 
+    //* et il sera le composant global de la partie public  
+    path: '', component: PlayoutComponent, children: [
+      //! redirection depuis nottre espace publique vers le route principal 
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
+      { path: 'home', component: HomeComponent },
+      { path: 'article', component: ArticleComponent },
+      { path: 'evenements', component: EvenementsComponent },
+      { path: 'contact', component: ContactComponent },
+
+    ]
+  }
+
+
+
+
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  //! Ne pas oublier de spécifier le forchild
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 export class PublicRoutingModule { }
