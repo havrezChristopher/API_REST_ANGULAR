@@ -25,8 +25,6 @@ const routes: Routes = [
           .then(m => m.EvenementsModule)
       },
 
-
-
     ]
   }
 ];
