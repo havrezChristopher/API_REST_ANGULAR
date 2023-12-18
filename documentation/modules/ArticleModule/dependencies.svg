@@ -24,55 +24,55 @@
 <title>cluster_ArticleModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="13,-70 13,-195 483,-195 483,-70 13,-70"/>
 </g>
-<g id="clust2" class="cluster">
-<title>cluster_ArticleModule_declarations</title>
-<polygon fill="none" stroke="black" points="189,-78 189,-130 475,-130 475,-78 189,-78"/>
-</g>
 <g id="clust5" class="cluster">
 <title>cluster_ArticleModule_imports</title>
-<polygon fill="none" stroke="black" points="21,-78 21,-130 181,-130 181,-78 21,-78"/>
+<polygon fill="none" stroke="black" points="315,-78 315,-130 475,-130 475,-78 315,-78"/>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_ArticleModule_declarations</title>
+<polygon fill="none" stroke="black" points="21,-78 21,-130 307,-130 307,-78 21,-78"/>
 </g>
 <!-- ADeleteComponent -->
 <g id="node1" class="node">
 <title>ADeleteComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="466.97,-122 339.03,-122 339.03,-86 466.97,-86 466.97,-122"/>
-<text text-anchor="middle" x="403" y="-99.8" font-family="Times,serif" font-size="14.00">ADeleteComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="298.97,-122 171.03,-122 171.03,-86 298.97,-86 298.97,-122"/>
+<text text-anchor="middle" x="235" y="-99.8" font-family="Times,serif" font-size="14.00">ADeleteComponent</text>
 </g>
 <!-- ArticleModule -->
 <g id="node3" class="node">
 <title>ArticleModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="308.42,-187 305.42,-191 284.42,-191 281.42,-187 209.58,-187 209.58,-151 308.42,-151 308.42,-187"/>
-<text text-anchor="middle" x="259" y="-164.8" font-family="Times,serif" font-size="14.00">ArticleModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="284.42,-187 281.42,-191 260.42,-191 257.42,-187 185.58,-187 185.58,-151 284.42,-151 284.42,-187"/>
+<text text-anchor="middle" x="235" y="-164.8" font-family="Times,serif" font-size="14.00">ArticleModule</text>
 </g>
 <!-- ADeleteComponent&#45;&gt;ArticleModule -->
 <g id="edge1" class="edge">
 <title>ADeleteComponent&#45;&gt;ArticleModule</title>
-<path fill="none" stroke="black" d="M403,-122.11C403,-141.34 403,-169 403,-169 403,-169 318.56,-169 318.56,-169"/>
-<polygon fill="black" stroke="black" points="318.56,-165.5 308.56,-169 318.56,-172.5 318.56,-165.5"/>
+<path fill="none" stroke="black" d="M235,-122.11C235,-122.11 235,-140.99 235,-140.99"/>
+<polygon fill="black" stroke="black" points="231.5,-140.99 235,-150.99 238.5,-140.99 231.5,-140.99"/>
 </g>
 <!-- AIndexComponent -->
 <g id="node2" class="node">
 <title>AIndexComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="320.81,-122 197.19,-122 197.19,-86 320.81,-86 320.81,-122"/>
-<text text-anchor="middle" x="259" y="-99.8" font-family="Times,serif" font-size="14.00">AIndexComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="152.81,-122 29.19,-122 29.19,-86 152.81,-86 152.81,-122"/>
+<text text-anchor="middle" x="91" y="-99.8" font-family="Times,serif" font-size="14.00">AIndexComponent</text>
 </g>
 <!-- AIndexComponent&#45;&gt;ArticleModule -->
 <g id="edge2" class="edge">
 <title>AIndexComponent&#45;&gt;ArticleModule</title>
-<path fill="none" stroke="black" d="M259,-122.11C259,-122.11 259,-140.99 259,-140.99"/>
-<polygon fill="black" stroke="black" points="255.5,-140.99 259,-150.99 262.5,-140.99 255.5,-140.99"/>
+<path fill="none" stroke="black" d="M91,-122.11C91,-141.34 91,-169 91,-169 91,-169 175.44,-169 175.44,-169"/>
+<polygon fill="black" stroke="black" points="175.44,-172.5 185.44,-169 175.44,-165.5 175.44,-172.5"/>
 </g>
 <!-- ArticleRoutingModule -->
 <g id="node4" class="node">
 <title>ArticleRoutingModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="172.54,-122 169.54,-126 148.54,-126 145.54,-122 29.46,-122 29.46,-86 172.54,-86 172.54,-122"/>
-<text text-anchor="middle" x="101" y="-99.8" font-family="Times,serif" font-size="14.00">ArticleRoutingModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="466.54,-122 463.54,-126 442.54,-126 439.54,-122 323.46,-122 323.46,-86 466.54,-86 466.54,-122"/>
+<text text-anchor="middle" x="395" y="-99.8" font-family="Times,serif" font-size="14.00">ArticleRoutingModule</text>
 </g>
 <!-- ArticleRoutingModule&#45;&gt;ArticleModule -->
 <g id="edge3" class="edge">
 <title>ArticleRoutingModule&#45;&gt;ArticleModule</title>
-<path fill="none" stroke="black" d="M101,-122.11C101,-141.34 101,-169 101,-169 101,-169 199.44,-169 199.44,-169"/>
-<polygon fill="black" stroke="black" points="199.44,-172.5 209.44,-169 199.44,-165.5 199.44,-172.5"/>
+<path fill="none" stroke="black" d="M395,-122.11C395,-141.34 395,-169 395,-169 395,-169 294.31,-169 294.31,-169"/>
+<polygon fill="black" stroke="black" points="294.31,-165.5 284.31,-169 294.31,-172.5 294.31,-165.5"/>
 </g>
 </g>
 </svg>

@@ -139,6 +139,8 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { RouterModule, Routes } from &#x27;@angular/router&#x27;;
 import { ErrorComponent } from &#x27;./_utils/error/error.component&#x27;;
+import { Auth2Guard } from &#x27;./_helpers/auth2.guard&#x27;;
+
 
 const routes: Routes &#x3D; [
 
@@ -153,7 +155,7 @@ const routes: Routes &#x3D; [
     {
       //! meme chose quand on arrive sur une route admin on charge le module  
       path:&#x27;admin&#x27;,loadChildren:() &#x3D;&gt; &quot;import (&#x27;./admin/admin.module&#x27;)\
-      .then (m &#x3D;&gt; m.AdminModule)&quot;
+      .then (m &#x3D;&gt; m.AdminModule)&quot;,canActivate:[Auth2Guard]
     },
     {
       path:&#x27;auth&#x27;,loadChildren:() &#x3D;&gt; &quot;import(&#x27;./auth/auth.module&#x27;)\
