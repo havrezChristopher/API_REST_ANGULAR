@@ -18,7 +18,6 @@ const routes: Routes = [
       { path: 'article', component: ArticleComponent },
       { path: 'evenements', component: EvenementsComponent },
       { path: 'contact', component: ContactComponent },
-
     ]
   }
 

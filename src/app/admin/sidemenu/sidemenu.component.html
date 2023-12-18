@@ -1,1 +1,22 @@
-<p>sidemenu works!</p>
+<nav>
+  <a class="simple_link"[routerLink]="['/']">Retour Acceuil</a>
+  <ul id="sidemenu">
+    <li><a routerLink="dashboard">Dashboard</a></li>
+    <li>> User</li>
+    <ul>
+      <li><a [routerLink]="['user']">liste</a></li>
+      <li><a [routerLink]="['user/add']">Ajouter</a></li>
+    </ul>
+    <li>> Article</li>
+    <ul>
+        <li><a [routerLink]="['article']">liste</a></li>
+        <li><a [routerLink]="['article/add']">Ajouter</a></li>
+    </ul>
+    <li>>Evenements</li>
+    <ul>
+      <li><a href="#">1Lien ...</a></li>
+      <li><a href="#">2Lien ...</a></li>
+      <li><a href="#">3Lien ...</a></li>
+    </ul>
+  </ul>
+</nav>
