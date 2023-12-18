@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ErrorComponent } from './_utils/error/error.component';
+import { Auth2Guard } from './_helpers/auth2.guard';
+
 
 const routes: Routes = [
 
@@ -15,7 +17,7 @@ const routes: Routes = [
     {
       //! meme chose quand on arrive sur une route admin on charge le module  
       path:'admin',loadChildren:() => import ('./admin/admin.module')
-      .then (m => m.AdminModule)
+      .then (m => m.AdminModule),canActivate:[Auth2Guard]
     },
     {
       path:'auth',loadChildren:() => import('./auth/auth.module')
