@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
-import { EvenementsComponent } from './evenements/evenements.component';
 import { ArticleComponent } from './article/article.component';
+import { EvenementsComponent } from './evenements/evenements.component';
+import { ContactComponent } from './contact/contact.component';
+import { RegisterComponent } from './register/register.component';
+
 import { PublicRoutingModule } from './public-routing.module';
 import { PlayoutComponent } from './playout/playout.component';
 import { NavBarrePlayoutComponent } from './playout/nav-barre-playout/nav-barre-playout.component';
@@ -19,11 +22,11 @@ import { MatMenuModule } from '@angular/material/menu';
     HomeComponent,
     EvenementsComponent,
     ArticleComponent,
-  
-
     PlayoutComponent,
     NavBarrePlayoutComponent,
     FooterPlayoutComponent,
+    RegisterComponent,
+    ContactComponent
     
     
   ],
@@ -32,6 +35,7 @@ import { MatMenuModule } from '@angular/material/menu';
     PublicRoutingModule,
     MatIconModule,
     MatMenuModule,
+    
     
     
     

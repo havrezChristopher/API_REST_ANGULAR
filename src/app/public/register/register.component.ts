@@ -1,27 +1,10 @@
-// import { Component } from '@angular/core';
-// import { FormsModule } from '@angular/forms';
+import { Component } from '@angular/core';
 
-// @Component({
-//   selector: 'app-register',
-//   templateUrl: './register.component.html',
-//   styleUrls: ['./register.component.css']
-// })
-// export class RegisterComponent {
-//   register: any
-//   password: any 
+@Component({
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
+})
+export class RegisterComponent {
 
-//   constructor() {
-
-//   }
-//   Connection(): void {
-// try {
-//   console.log('coucou');
-  
-// } catch (error) {
-//   console.error(error)
-  
-// }
-//   }
-
-
-// }
+}
