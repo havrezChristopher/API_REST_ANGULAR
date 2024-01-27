@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav-barre-playout.component.css']
 })
 export class NavBarrePlayoutComponent {
+  isLoggedIn = false;
 
+
+
+
+  logout() {
+    // this.authService.logout();
+  }
 }

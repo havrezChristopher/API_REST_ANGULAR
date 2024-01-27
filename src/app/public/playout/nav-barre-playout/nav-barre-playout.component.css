@@ -1,0 +1,44 @@
+/* logo */
+.nav-brand img {
+  height: 60px; /* ou toute autre taille appropriée */
+  width: auto;
+border-radius: 100%;} 
+
+nav {
+  background-color: #111;
+  overflow: hidden;
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.8); /* Ombrage sombre */
+  border-radius: 10px; /* Ajout de border-radius */
+}
+
+nav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #00bfff;
+  color: #1f1f1f;
+  border-radius: 10px;
+}
+
+#connection-btn {
+  float: right;
+  background-color: #00bfff;
+  color: #1f1f1f;
+  border: none;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 10px; /* Ajout de border-radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajout de box-shadow */
+}
+
+#connection-btn:hover {
+  background-color: #1f1f1f;
+  color: #00bfff;
+}
