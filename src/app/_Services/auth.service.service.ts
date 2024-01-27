@@ -29,15 +29,15 @@ export class AuthServiceService {
 
       );
   };
-  sigup(emailUser: string, password: string): Observable<any> {
-    const data = { emailUser, password };
-    // ici on parametrer les headers de la requet pour etre sur que l on envoie ce que le bac attend 
-    const headers =new HttpHeaders({
-      'Content-Type ': 'application/json'
-    });
-    // ici on stock tout dans les variable et on stock tout dans la requetepour que ce soit moin long 
-    const options ={headers:headers}
-    // sa evite de mettre de la ligne 33 a la ligne 39 on mais dans des variable que l on mais dans la requete plus lisible
-    return this.http.post(`${this.API_URL}/auth/register`,data,options)
-  }
+  // signup(emailUser: string, password: string): Observable<any> {
+  //   const data = { emailUser, password };
+  //   // ici on parametrer les headers de la requet pour etre sur que l on envoie ce que le bac attend 
+  //   const headers =new HttpHeaders({
+  //     'Content-Type ': 'application/json'
+  //   });
+  //   // ici on stock tout dans les variable et on stock tout dans la requetepour que ce soit moin long 
+  //   const options ={headers:headers}
+  //   // sa evite de mettre de la ligne 33 a la ligne 39 on mais dans des variable que l on mais dans la requete plus lisible
+  //   return this.http.post(`${this.API_URL}/auth/register`,data,options)
+  // }
 }

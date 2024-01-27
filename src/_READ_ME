@@ -1,0 +1,4 @@
+corriger formulaire sur login
+le formulaire ce trouve sur auth/login
+la route proteger est auth/admin
+gerer page 404
