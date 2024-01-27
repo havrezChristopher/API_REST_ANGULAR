@@ -19,6 +19,14 @@ export class TokenServiceService {
     localStorage.removeItem('token')
     this.router.navigate(['/'])
   }
+  clearTokenExpired(): void {
+    localStorage.removeItem('token')
+    this.router.navigate(['/'])
+  }
+  // typer String | null
+  getToken():void {
+    localStorage.getItem('token')
+  }
 
   islogin(): boolean {
     const token = localStorage.getItem('token')

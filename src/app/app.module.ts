@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ErrorComponent } from './_utils/error/error.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TokenInterceptorProvider } from './_helper/token-interceptor.interceptor';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [TokenInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
