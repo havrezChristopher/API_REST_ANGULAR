@@ -24,8 +24,8 @@ export class TokenServiceService {
     this.router.navigate(['/'])
   }
   // typer String | null
-  getToken():void {
-    localStorage.getItem('token')
+  getToken():string |null {
+    return localStorage.getItem('token')
   }
 
   islogin(): boolean {

@@ -21,6 +21,7 @@ export class LoginComponent {
 
   ) { }
 
+// récuperer un utilisateur 
 
   Connection(loginForm: NgForm): void {
     if (loginForm.valid) {

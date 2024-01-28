@@ -1,1 +1,32 @@
-<p>u-index works!</p>
+<h2>Liste des utilisateurS</h2>
+<table>
+  <thead>
+    <th>*Action*</th>
+    <th>id</th>
+    <th>Photo</th>
+    <th>Prenom</th>
+    <th>Nom</th>
+    <th>Birthday</th>
+    <th>Adresse email</th>
+    <th>Role</th>
+    <th>EmailConfirmed</th>
+    <th>hashedPassword</th>
+    <th>Date de création</th>
+    <th></th>
+  </thead>
+  <!-- finir pour les autre section -->
+  <tbody>
+    <tr *ngFor="let user of userList">
+      <td><a [routerLink]="['edit/:id']" >Modifier</a></td>
+      <td>{{ user.idUser }}</td>
+      <td>{{ user.idPhoto }}</td>
+      <td>{{ user.firstName }}</td>
+      <td>{{ user.lastName }}</td>
+      <td>{{ user.birthday | date :'dd/mm/yyyy'}}</td>
+      <td>{{ user.emailUser }}</td>
+      <td>{{ user.role }}</td>
+      <td>{{ user.emailConfirmed }}</td>
+      <td>{{ user.hashedPassword }}</td>
+    </tr>
+  </tbody>
+</table>

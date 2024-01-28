@@ -3,6 +3,7 @@ import { environment } from 'src/environments/environment.development';
 import { CookieService } from 'ngx-cookie-service';
 import { Observable, pipe, tap } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http'
+import { string } from 'yup';
 @Injectable({
   providedIn: 'root'
 })
@@ -28,7 +29,9 @@ export class AuthServiceService {
 
 
       );
-  };
+      // Récuperation email 
+
+      }
   // signup(emailUser: string, password: string): Observable<any> {
   //   const data = { emailUser, password };
   //   // ici on parametrer les headers de la requet pour etre sur que l on envoie ce que le bac attend 

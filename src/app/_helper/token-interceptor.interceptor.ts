@@ -23,23 +23,29 @@ export class TokenInterceptorInterceptor implements HttpInterceptor {
 
     const token = this.tokenService.getToken()
     // SI token à insérer dans le header
-    if (token !== null) {
-      let clone = request.clone({
-        headers: request.headers.set('Authorization', 'bearer ' + token)
-      })
-      // console.log(clone)
-      // return next.handle(clone)
-      //   .pipe(
-      //     catchError(error => {
-      //       console.log(error)
+    // if (token !== null) {
+    //   let clone = request.clone({
+    //     headers: request.headers.set('authorization', 'bearer ' + token)
+    //   })
+    //   console.log(clone)
+    //   return next.handle(clone)
+    //     .pipe(
+    //       catchError(error => {
+    //         console.log(error)
 
-      //       if (error.status === 401) {
-      //         this.tokenService.clearTokenExpired()
+    //         if (error.status === 401) {
+    //           this.tokenService.clearTokenExpired()
 
-      //       }
-          
-
+    //         }
+    //       }))
+    if (token) {
+      request = request.clone({
+        setHeaders: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
     }
+    
     // Renvoie la requet apres interceptor
     return next.handle(request);
   }
