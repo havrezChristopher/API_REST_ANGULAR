@@ -19,9 +19,6 @@ export class UserServiceService {
   }
 
   getUser(idUser: any): Observable<any> {
-    console.log(idUser);
-
-    // const data = {idUser}
     return this.http.get<any>(`${this.API_URL}/user/edit/${idUser}`)
   }
 

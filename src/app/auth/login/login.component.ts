@@ -30,9 +30,14 @@ export class LoginComponent {
           this.TokenService.saveToken(response.token)
           console.log(response.token);
           this.router.navigate(['admin']);
+        },
+        error => {
+          
+          console.error('Erreur de connexion :', error);
+          
+        }
 
-
-        });
+        );
     }
 
   }

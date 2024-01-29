@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { UserServiceService } from 'src/app/_Services/user.service.service';
-// typer les observable
-import { IUser } from 'src/app/_interface/user';
 
 @Component({
   selector: 'app-u-index',

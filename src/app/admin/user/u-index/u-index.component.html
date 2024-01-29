@@ -1,4 +1,7 @@
-<h2>Liste des utilisateurS</h2>
+<fieldset>
+  <legend><h3>Utilisateurs</h3></legend>
+ 
+
 <table>
   <thead>
     <th>*Action*</th>
@@ -17,7 +20,8 @@
   <!-- finir pour les autre section -->
   <tbody>
     <tr *ngFor="let user of userList">
-      <td><a [routerLink]="['edit/:id']" >Modifier</a></td>
+      <!-- je lui donne la route ici edit et l object user -->
+      <td><a [routerLink]="['edit',user.idUser]" >Modifier</a></td>
       <td>{{ user.idUser }}</td>
       <td>{{ user.idPhoto }}</td>
       <td>{{ user.firstName }}</td>
@@ -30,3 +34,4 @@
     </tr>
   </tbody>
 </table>
+</fieldset>
