@@ -1,4 +1,4 @@
-.admin_menu{
+/* .admin_menu{
     display: flex;
 }
 .menu{
@@ -6,4 +6,54 @@
 }
 .admin_container{
     flex-grow: 6;
+} */
+.admin_menu {
+    display: flex;
+    flex-wrap: nowrap; /* Assure que les éléments sont alignés sur une seule ligne */
+    min-height: 100vh; /* Fait en sorte que le menu prenne toute la hauteur de la fenêtre */
+    background-color: #f4f4f4; /* Couleur de fond légère pour le conteneur principal */
+}
+
+.menu {
+    flex-grow: 1;
+    max-width: 250px; /* Largeur maximale pour le menu latéral */
+    min-height: 100vh; /* Fait en sorte que le menu prenne toute la hauteur de la fenêtre */
+    background-color: #343a40; /* Couleur de fond pour le menu latéral */
+    color: #ffffff; /* Couleur du texte pour le menu latéral */
+    padding: 20px; /* Espacement autour du contenu dans le menu */
+}
+
+.admin_container {
+    flex-grow: 6; /* Permet au conteneur principal d'occuper plus d'espace */
+    background-color: #ffffff; /* Couleur de fond pour le conteneur de contenu */
+    padding: 20px; /* Espacement autour du contenu dans le conteneur */
+    overflow: auto; /* Ajoute une barre de défilement si nécessaire */
+}
+
+/* Amélioration de la lisibilité et de l'apparence des liens */
+.menu a {
+    display: block; /* Rend chaque lien en bloc pour occuper toute la largeur disponible */
+    color: #ffffff; /* Couleur du texte pour les liens */
+    padding: 10px; /* Espacement autour du texte dans chaque lien */
+    margin: 5px 0; /* Espacement entre les liens */
+    text-decoration: none; /* Supprime le soulignement des liens */
+}
+
+.menu a:hover {
+    background-color: #495057; /* Couleur de fond au survol des liens */
+    border-radius: 5px; /* Arrondit les coins des liens au survol */
+}
+
+/* Styles pour la responsive design */
+@media (max-width: 768px) {
+    .admin_menu {
+        flex-direction: column; /* Change la disposition en colonne sur les petits écrans */
+    }
+    .menu {
+        max-width: none; /* Permet au menu de s'étendre sur toute la largeur */
+        min-height: auto; /* Ajuste la hauteur du menu */
+    }
+    .admin_container {
+        flex-grow: 1; /* Réinitialise la croissance du conteneur sur les petits écrans */
+    }
 }

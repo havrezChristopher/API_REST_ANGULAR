@@ -11,8 +11,10 @@ import { IUser } from 'src/app/_interface/user';
 })
 export class UEditComponent implements OnInit {
 
-  idUser: number | null = null;
-  user: IUser | null = null;
+  idUser!: any
+  lastname!:string
+  user!:any 
+  
   constructor
     (
       private activated: ActivatedRoute,
@@ -40,16 +42,19 @@ export class UEditComponent implements OnInit {
     
   // }
   ngOnInit(): void {
-    this.activated.paramMap.subscribe(params => {
-      const idUserString = params.get('idUser');
-      if (idUserString) {
-        const idUser = parseInt(idUserString, 10);
-        this.userService.getUser(idUser).subscribe(data => {
-          console.log(data);
-          this.user = data;
-        });
+
+    this.activated.params.subscribe(params => {
+      this.idUser = params['id']
+      this.idUser = parseInt(this.idUser)
+      console.log('Fuck==============',this.idUser);
+      
+    })
+    this.userService.getUser(this.idUser).subscribe(
+      (userDetails) => {
+        this.lastname = userDetails.firstName
+
       }
-    });
+    )
   }
 
   onSubmit(): void {

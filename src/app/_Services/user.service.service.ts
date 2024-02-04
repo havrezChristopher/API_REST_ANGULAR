@@ -19,6 +19,9 @@ export class UserServiceService {
   }
 
   getUser(idUser: any): Observable<any> {
+    return this.http.get<any>(`${this.API_URL}/user/${idUser}`)
+  }
+  getUpdate(idUser:any):Observable<any> {
     return this.http.get<any>(`${this.API_URL}/user/edit/${idUser}`)
   }
 

@@ -1,23 +1,34 @@
-nav{
+/* Styles de base pour la navigation */
+nav {
+    background-color: #343a40; /* Couleur de fond du menu */
+    color: #ffffff;
     padding: 10px;
-}
-#sidemenu{
-    list-style: none;
-    padding: 0px;
-}
-#sidemenu ul{
-    list-style: none;
-    padding: 0px;
-}
-.simple_link{
-    margin-bottom: 8px;
-    display: block;
-}
-a{
-    /* text-decoration: none; */
-    color: rgb(102, 19, 19);
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+  }
+  
+  nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 
+  }
+
+
+  nav a:hover {
+    background-color: #013e7a; /* Effet au survol */
+  }
+  
+  /* Styles pour les listes imbriquées et les éléments de liste */
+  nav ul {
+    list-style-type: none;
+    padding: 0;
     
-}
-li{
-    padding: 6px;
-}
+  }
+  
+  nav ul ul {
+    margin-left: 20px; /* Décalage pour les sous-menus */
+    border-left: 2px solid #495057; /* Ligne verticale pour les sous-menus */
+  }
+
+  

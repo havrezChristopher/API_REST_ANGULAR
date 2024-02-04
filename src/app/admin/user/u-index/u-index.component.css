@@ -1,0 +1,50 @@
+fieldset {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 5px;
+  }
+  
+  legend {
+    padding: 0 10px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover {
+    background-color: #e8f4f8;
+  }
+  
+  a {
+    color: #337ab7;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Amélioration de la lisibilité sur les petits écrans */
+  @media screen and (max-width: 600px) {
+    table {
+      display: block;
+      overflow-x: auto;
+    }
+  }
+  

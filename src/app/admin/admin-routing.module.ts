@@ -8,7 +8,7 @@ const routes: Routes = [
     path: '', component: AdminLayoutComponent, children: [
       //! redirection quand on arrive ici sur /admin  
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-      { path: 'dashboard', component: DashboardComponent },
+      { path: 'dashboard/:idUser', component: DashboardComponent },
 
       {
         //! Admin/user quand on arrive sur cette route on charge le module et on l active 
