@@ -6,7 +6,7 @@ import { UIndexComponent } from './u-index/u-index.component';
 import { UEditComponent } from './u-edit/u-edit.component';
 import { UAddComponent } from './u-add/u-add.component';
 import { UDeleteComponent } from './u-delete/u-delete.component';
-import { MatCardModule } from '@angular/material/card';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +19,7 @@ import { MatCardModule } from '@angular/material/card';
   imports: [
     CommonModule,
     UserRoutingModule,
-    MatCardModule
+    FormsModule
   ]
 })
 export class UserModule { }

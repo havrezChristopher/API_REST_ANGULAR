@@ -5,7 +5,7 @@
     <li>*** User ***</li>
     <ul>
       <li><a [routerLink]="['user']">Liste des Utilisateurs</a></li>
-      <li><a [routerLink]="['user/edit/:id']">Modifier</a></li>
+      <li><a [routerLink]="['user/edit,:idUser']">Modifier</a></li>
       <li><a [routerLink]="['user/add']">Ajouter</a></li>
       <li><a [routerLink]="['user/delete/:id']">Suprimer</a></li>
     </ul>
@@ -13,16 +13,16 @@
     <ul>
         <li><a [routerLink]="['article']">liste Des Aticle</a></li>
         <li><a [routerLink]="['article/add']">Ajouter</a></li>
-        <li><a [routerLink]="['article/edit/:id']">Modifier</a></li>
-        <li><a [routerLink]="['article/delete/:id']">Suprimer</a></li>
+        <li><a [routerLink]="['article/edit/:idUser']">Modifier</a></li>
+        <li><a [routerLink]="['article/delete/:idUser']">Suprimer</a></li>
       
     </ul>
     <li>*** Evenements ***</li>
     <ul>
       <li><a [routerLink]="['evenement']">liste Des Evenement</a></li>
         <li><a [routerLink]="['evenement/add']">Ajouter</a></li>
-        <li><a [routerLink]="['evenement/edit/:id']">Modifier</a></li>
-        <li><a [routerLink]="['evenement/delete/:id']">Suprimer</a></li>
+        <li><a [routerLink]="['evenement/edit/:idUser']">Modifier</a></li>
+        <li><a [routerLink]="['evenement/delete/:idUser']">Suprimer</a></li>
     </ul>
   </ul>
 </nav>

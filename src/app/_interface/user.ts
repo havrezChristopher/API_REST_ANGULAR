@@ -1,9 +1,14 @@
 export interface IUser {
     idUser: number,
     lastName: string,
+    hashedPassword:string,
     firstName: string,
     emailUser: string,
+    emailConfirmed:string,
     password: string,
+    birthday:string,
+    idPhoto:string,
+    role:string,
     createdAt: string,
     updatedAt: string,
     deletedAt: null | string

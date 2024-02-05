@@ -3,10 +3,42 @@
     <div>
         <h2>Détails de l'utilisateur</h2>
         <p>ID:{{idUser}}</p>
-        <!-- <p>Prénom: {{ firstName }}</p>
-        <p>Nom: {{ lastName }}</p>
-        <p>Email: {{ emailUser }}</p>
-        <p><strong>Role:</strong> {{ role }}</p> -->
-        
+<form #f="ngForm" name="form" (ngSubmit)="f.form.valid && onSubmit()">
+    <div class="form-group">
+        <label for="firstName">Nom</label>
+        <input type="text" id="firstName"
+            name="firstName"
+            [(ngModel)]="user.firstName"
+            #firstName="ngModel"
+        >
+    </div>
+    <div class="form-group">
+        <label for="lastName">Prénom</label>
+        <input type="text" id="lastName"
+            name="lastName"
+            [(ngModel)]="user.lastName"
+            #lastName="ngModel"
+        >
+    </div>
+    <div class="form-group">
+        <label for="emailUser">Adresse Email</label>
+        <input type="text" id="emailUser"
+            name="emailUser"
+            [(ngModel)]="user.emailUser"
+            #emailUser="ngModel"
+        >
+    </div>
+    <div class="form-group">
+      <label for="role">*** Role ***</label>
+      <input type="text" id="role"
+          name="role"
+          [(ngModel)]="user.role"
+          #role="ngModel"
+      >
+  </div>
+    <div class="form-group">
+        <button type="submit">Modifier</button>
+    </div>
+</form>
       </div>
 </fieldset>

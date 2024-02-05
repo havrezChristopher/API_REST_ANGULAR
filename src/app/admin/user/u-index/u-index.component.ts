@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserServiceService } from 'src/app/_Services/user.service.service';
+import {IUser} from 'src/app/_interface/user'
 
 @Component({
   selector: 'app-u-index',
@@ -8,22 +9,91 @@ import { UserServiceService } from 'src/app/_Services/user.service.service';
 })
 export class UIndexComponent implements OnInit {
 
-  userList : any[] = []
+  userList: IUser[] = []
 
-
-  constructor(
-    private userService:UserServiceService
-  ) { }
+  constructor(private userService: UserServiceService) { }
 
   ngOnInit(): void {
     this.userService.getAllUser().subscribe(
-      ( user :any) => {
-        console.log(user);
-         this.userList = user
-        
-      }
-    )
-
+      (user:any) => {
+        console.log(user)    
+        this.userList = user
+    })
   }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
