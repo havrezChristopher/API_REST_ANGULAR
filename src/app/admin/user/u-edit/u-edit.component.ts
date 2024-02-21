@@ -33,13 +33,14 @@ export class UEditComponent implements OnInit {
 
 ngOnInit(): void {
   let idUser = this.activated.snapshot.paramMap.get('idUser');
-  console.log('Fucking id ====> ',idUser);
+  console.log('Fucking id ==> ',idUser);
 
   if (idUser) {
     this.userService.getUser(idUser).subscribe(
       user => {
         console.log(user);
         this.user = user
+        this.idUser=user.idUser
       },
       error => console.error('Erreur lors de la récupération de l’utilisateur:', error)
     );

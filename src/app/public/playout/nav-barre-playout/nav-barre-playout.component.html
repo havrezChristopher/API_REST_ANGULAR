@@ -1,10 +1,9 @@
-<nav class="navbar">
-
+<nav>
+  <div class="links-container">
     <a routerLink="/"><mat-icon>home</mat-icon></a>
     <a routerLink="article">Article</a>
     <a routerLink="evenements">Evenements</a>
     <a routerLink="/contact">Contact</a>
-    <a routerLink="/register">Register</a>
 
     <!-- Liens Quand l'utilisateur est loger -->
     <ng-container *ngIf="isLoggedIn">
@@ -28,21 +27,22 @@
         </button>
         <!-- gestionnaire d évenement sur matherial -->
         <button mat-menu-item (click)="logout()">
-          <mat-icon>exit_to_app</mat-icon>
+          <!-- <mat-icon>exit_to_app</mat-icon> -->
           <span>Déconnexion</span>
         </button>
       </mat-menu>
       
-      <button mat-icon-button [matMenuTriggerFor]="userMenu">
-        <mat-icon>person</mat-icon>
-      </button>
     </ng-container>
 
 
     <!-- Liens Quand l'utilisateur n'est pas loger -->
     <ng-container *ngIf="!isLoggedIn">
-      <!-- <a routerLink="auth/register">Inscription</a> -->
+      <div class="btn-login">
       <a routerLink="auth/login">Connexion</a>
+    </div>
+      <div class="btn-signup">
+      <a routerLink="/register">S'enregistrer</a> 
+    </div>
     </ng-container>
-
+  </div>
 </nav>

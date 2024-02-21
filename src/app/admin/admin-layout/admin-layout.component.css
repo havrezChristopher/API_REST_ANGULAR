@@ -1,12 +1,4 @@
-/* .admin_menu{
-    display: flex;
-}
-.menu{
-    flex-grow: 1;
-}
-.admin_container{
-    flex-grow: 6;
-} */
+
 .admin_menu {
     display: flex;
     flex-wrap: nowrap; /* Assure que les éléments sont alignés sur une seule ligne */

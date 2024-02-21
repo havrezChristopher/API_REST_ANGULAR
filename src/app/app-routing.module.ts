@@ -13,7 +13,7 @@ const routes: Routes = [
     path : '', loadChildren : () => import('./public/public.module')
     .then (m => m.PublicModule)
   },
-
+//!  
     {
       //! meme chose quand on arrive sur une route admin on charge le module  
       path:'admin',loadChildren:() => import ('./admin/admin.module')

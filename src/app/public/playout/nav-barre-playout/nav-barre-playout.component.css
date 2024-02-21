@@ -1,44 +1,54 @@
-/* logo */
-.nav-brand img {
-  height: 60px; /* ou toute autre taille appropriée */
-  width: auto;
-border-radius: 100%;} 
-
 nav {
-  background-color: #111;
+  /* border: solid red 2px; */
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
   overflow: hidden;
-  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.8); /* Ombrage sombre */
-  border-radius: 10px; /* Ajout de border-radius */
+}
+nav {
+  height: 75px;
+  background-color: #242424;
+  box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.8); /* Ombrage sombre */
+  /* News */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Aligner tout le contenu à droite si vous n'utilisez pas de conteneur spécifique pour les liens */
 }
 
+.links-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
 nav a {
-  float: left;
-  display: block;
+  
+  text-decoration: none;
   color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
   text-align: center;
+  margin: 5px;
   padding: 14px 16px;
-  text-decoration: none;
 }
-
+.btn-login a {
+  height: 16px;
+  display: flex;
+  align-items: center;
+  color: white;
+  background: #00bfff;
+  /* margin: 15px; */
+  gap: 10px;
+  border-radius: 30px;
+}
+.btn-signup a {
+  height: 16px;
+  display: flex;
+  align-items: center;
+  color: white;
+  border: solid #00bfff 1px;
+  border-radius: 30px;
+}
 nav a:hover {
-  background-color: #00bfff;
-  color: #1f1f1f;
-  border-radius: 10px;
-}
-
-#connection-btn {
-  float: right;
-  background-color: #00bfff;
-  color: #1f1f1f;
-  border: none;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 16px;
-  border-radius: 10px; /* Ajout de border-radius */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajout de box-shadow */
-}
-
-#connection-btn:hover {
-  background-color: #1f1f1f;
-  color: #00bfff;
+  border-bottom: 1px solid #00bfff;
 }

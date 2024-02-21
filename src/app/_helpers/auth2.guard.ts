@@ -28,13 +28,6 @@ export class Auth2Guard implements CanActivate {
 
 
 
-
-
-
-
-
-    // const userIsAuthorized = /* Votre logique de vérification d'authentification ici */
-
     // if (userIsAuthorized) {
     //   return true; // L'utilisateur est autorisé
     // } else {
