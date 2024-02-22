@@ -8,12 +8,14 @@ import {
 } from '@angular/common/http';
 import { Observable, catchError } from 'rxjs';
 import { TokenServiceService } from '../_Services/token.service.service';
+import { ApiErrorService } from '../_Subject/api-error.service';
 
 @Injectable()
 export class TokenInterceptorInterceptor implements HttpInterceptor {
 
   constructor(
-    private tokenService: TokenServiceService
+    private tokenService: TokenServiceService,
+    private apiSendError :ApiErrorService
 
   ) { }
   // Mise en place d un interceptor 
@@ -50,7 +52,7 @@ export class TokenInterceptorInterceptor implements HttpInterceptor {
         },
       });
     }
-    
+    this.apiSendError.sendError('test Message Error')
     // Renvoie la requet apres interceptor
     return next.handle(request);
   }
