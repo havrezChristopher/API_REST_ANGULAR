@@ -1,88 +1,94 @@
 corriger formulaire sur login
-le formulaire ce trouve sur auth/login
-la route proteger est auth/admin
+le formulaire ce trouve sur auth / login
+la route proteger est auth / admin
+
 regrouper composant Aurelien
 
-**utilisation de mapp depuis api gratuite et public**
+  ** utilisation de mapp depuis api gratuite et public **
 > OpenStreetMap
 
-<OpenStreetMap (OSM) est une alternative gratuite à Google Maps. 
+    < OpenStreetMap(OSM) est une alternative gratuite à Google Maps. 
 Il est open source et peut être utilisé directement ou via des 
 bibliothèques qui l'exploitent.
 
-<Intégration directe : Vous pouvez intégrer une carte OSM 
+  < Intégration directe: Vous pouvez intégrer une carte OSM 
 dans votre site web en utilisant une simple balise iframe.
-Utilisation de bibliothèques : Des bibliothèques telles que Leaflet ou OpenLayers 
+Utilisation de bibliothèques: Des bibliothèques telles que Leaflet ou OpenLayers 
 vous permettent de créer des cartes interactives basées sur les données d'OSM.
-<Intégration de base avec OpenStreetMap via iframe
+  < Intégration de base avec OpenStreetMap via iframe
 Voici un exemple d'intégration simple avec OpenStreetMap sans utiliser de JavaScript :
-`<iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+  `<iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
 src="https://www.openstreetmap.org/export/embed.html?bbox=-0.1455841064453125%2C51.4990805461804%2C-0.1256256103515625%2C51.507350075843814&amp;layer=mapnik"
 style="border: 1px solid black"></iframe>
 `
 
+  <========================================================================= Synthese observable ===>
+
+    il y a 3 tipe d observables
+
+1.Cold = observable(unicast = monoCannal)
+2.hot = subject(multiCast = MultiCannal) ===> envoie la meme donée a tout ceux qui on souscrits
+3.behavior Subject = subject avec une valeur(initials)
+
+  //* pour le Cold observable envoie les donnée produits 
+  // on ne peux y souscrire que une seule fois 
+  // et si on fais une autre souscription ce serra pour une autre donnée 
+
+  // !on ne peut y souscrire qu'une seule fois (unicast)si il y a une autre souscription 
+  // sa peux etre un autre donnée qui va transiter 
+  // (Sur des Canal Différent)
+
+  //* pour le hot il faux i souscrire et apres envoyer !
+  // on peux y souscrire de nimporte ou de notre application et ce serra 
+  // la meme donée qui va transiter de que il y a un nex qui va etre lancer 
+
+  // !plussieur souscription peuvent etre lancer on serra sur le meme signal (multiCast)
+  // (Sur les meme Canaux! )
+  // on peux y souscrire plusieurs fois et tout le monde recoit la meme donnée 
+
+  // on ne peut avoir les donnée t en que l on y a pas souscrit et celle qui on ete envoyer avent sont perdu !
 
 
-Pour intégrer Leaflet dans un projet Angular et afficher une carte avec un marqueur pour Charleroi en Belgique, suivez les étapes ci-dessous. Assurez-vous de d'abord installer la bibliothèque Leaflet dans votre projet Angular via npm :
 
-bash
-Copy code
-npm install leaflet
-Une fois l'installation terminée, vous pouvez procéder à l'intégration dans votre composant Angular.
+  //! Le BehaviorSubject prend une valeur par default et est capable de recuperer les derniere valeurs recu avent la souscription 
 
-1. Ajoutez Leaflet CSS à votre fichier angular.json :
 
-json
-Copy code
-"styles": [
-  "src/styles.css",
-  "node_modules/leaflet/dist/leaflet.css"
-],
-2. Ajoutez le HTML suivant dans le fichier de template de votre composant (par exemple, app.component.html) :
 
-html
-Copy code
-<div id="map" style="width: 100%; height: 400px;"></div>
-3. Ajoutez le code TypeScript suivant dans votre composant (par exemple, app.component.ts) :
+  **** EXEMPLE ***
+// On crée au préalable un event binding au clic (start) dans l'html 
+  //declaretion
+  subject = new Subject()
+// initialisation du behaviorSubject
+bSubject = new behaviorSubject('0')
 
-typescript
-Copy code
-import { AfterViewInit, Component } from '@angular/core';
-import * as L from 'leaflet';
-
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
-export class AppComponent implements AfterViewInit {
-  private map;
-
-  constructor() {}
-
-  ngAfterViewInit(): void {
-    this.initMap();
-  }
-
-  private initMap(): void {
-    this.map = L.map('map').setView([50.410810, 4.444643], 13);
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-      attribution: '© OpenStreetMap contributors'
-    }).addTo(this.map);
-
-    const marker = L.marker([50.410810, 4.444643]);
-    marker.addTo(this.map).bindPopup('Charleroi, Belgique');
-  }
+ngOninit(): void {
+  // toute les donnée ici seront perdue 
+  this.subject.next('1')
+  this.subject.next('2')
 }
-Ce code initialise la carte après que la vue de votre composant Angular a été initialisée (ngAfterViewInit). Il configure la carte pour centrer sur les coordonnées de Charleroi et ajoute un marqueur à cet emplacement.
 
-4. Assurez-vous d'avoir le style CSS pour l'élément de la carte dans votre fichier de styles (par exemple, styles.css) :
+Start(){
+  this.subject.subscribe(data => {
+    console.log(`Subject : ${data}`);
 
-css
-Copy code
-#map { 
-  height: 400px; 
+  })
+  // On récupère uniquement le 3 car o
+  this.subject.next('3')
+  // Ne pas oublier les complete car sinon le subject crée une Boucle 
+  this.subject.complete()
+
+//* BehaviorSubject  On utilisent Principalement celuis si ! ----------------------------------------------------------------- 
+  this.bSubject.next('4')
+  // on recupère ici l ancienne valeur la 5 
+  this.bSubject.next('5')
+
+//* BehaviorSubject  On utilisent Principalement celuis si ! ----------------------------------------------------------------- 
+
+  this.bSubject.subscribe(data => {
+    console.log(`Behavior : ${data}`);
+  })
+  this.bSubject.next('6')
 }
-Avec ces étapes, votre application Angular devrait maintenant afficher une carte Leaflet avec un marqueur pour Charleroi
+
+//! Il en existe pas mal ici le ReplaySubject()
+Permet de récupèrer l'ensemble des anciennes Donnée absoluments tout ! 

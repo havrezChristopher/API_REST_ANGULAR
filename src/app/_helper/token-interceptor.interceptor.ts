@@ -37,7 +37,12 @@ export class TokenInterceptorInterceptor implements HttpInterceptor {
     //           this.tokenService.clearTokenExpired()
 
     //         }
+    //            return throwError('Session Expired')
     //       }))
+    //        }
+
+//   return next.handle(request);
+// }
     if (token) {
       request = request.clone({
         setHeaders: {
