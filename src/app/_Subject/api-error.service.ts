@@ -6,11 +6,11 @@ import { Subject } from 'rxjs';
 })
 export class ApiErrorService {
 
-  apiError = new Subject()
+  apiError = new Subject<string>()
 
   constructor() { }
-  sendError(msg:string) : void {
-this.apiError.next(msg)
+  sendError(message: string): void {
+    this.apiError.next(message)
   }
 
 
