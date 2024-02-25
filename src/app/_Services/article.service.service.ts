@@ -10,7 +10,7 @@ export class ArticleServiceService {
 
   private API_URL=environment.API_URL
 
-  constructor(private http=HttpClient) { }
+  constructor(private http:HttpClient) { }
 
     getAllArticle() : Observable<any>{
       return this.http.get<any>(`${this.API_URL}/article`)
