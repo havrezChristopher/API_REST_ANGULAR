@@ -1,4 +1,75 @@
 <fieldset>
-    <legend><h3>Modifier un Article</h3></legend>
-   
+  <legend><h3>Modifier un Article</h3></legend>
+  <fieldset>
+    <legend><h3>Modifier un utilisateurs</h3></legend>
+    <div>
+      <h2>Détails de l'utilisateur</h2>
+
+      <form #f="ngForm" name="form" (ngSubmit)="f.form.valid && onSubmit()">
+        <div class="form-group">
+          <label for="nom">Nom</label>
+          <input
+            type="text"
+            id="nom"
+            name="nom"
+            [(ngModel)]="article.nom"
+            #nom="ngModel"
+          />
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input
+            type="text"
+            id="description"
+            name="description"
+            [(ngModel)]="article.description"
+            #description="ngModel"
+          />
+        </div>
+        <div class="form-group">
+          <label for="prix">Prix</label>
+          <input
+            type="text"
+            id="prix"
+            name="prix"
+            [(ngModel)]="article.prix"
+            #prix="ngModel"
+          />
+        </div>
+        <div class="form-group">
+          <label for="quantiter">Quantiter</label>
+          <input
+            type="text"
+            id="quantiter"
+            name="quantiter"
+            [(ngModel)]="article.quantiter"
+            #quantiter="ngModel"
+          />
+        </div>
+        <div class="form-group">
+          <label for="stock">Stock</label>
+          <input
+            type="text"
+            id="stock"
+            name="stock"
+            [(ngModel)]="article.stock"
+            #stock="ngModel"
+          />
+        </div>
+        <!-- <div class="form-group">
+          <label for="dateDeCreation">DateDeCreation</label>
+          <input
+            type="text"
+            id="dateDeCreation"
+            name="dateDeCreation"
+            [(ngModel)]="article.dateDeCreation"
+            #dateDeCreation="ngModel"
+          />
+        </div> -->
+        <div class="form-group">
+          <button type="submit">Modifier</button>
+        </div>
+      </form>
+    </div>
+  </fieldset>
 </fieldset>

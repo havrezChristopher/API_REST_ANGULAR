@@ -1,4 +1,37 @@
 <fieldset>
-    <legend><h3>Index un Article</h3></legend>
-   
+  <legend><h3>Index un Article</h3></legend>
+
+  <table>
+    <thead>
+      <th>*Action*</th>
+      <th>ID</th>
+      <th>Nom</th>
+      <th>Description</th>
+      <th>Prix</th>
+      <th>Quantiter</th>
+      <th>Stock</th>
+      <th>Date de création</th>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let article of articleList">
+        <!-- je lui donne la route ici edit et l object user -->
+        <td><a [routerLink]="['edit', article.id]">Modifier</a></td>
+
+        <td>
+          <button (click)="deleteTrash(article.id)"*ngIf="article.deletedAt==null">T</button>
+          <button (click)="deleteUnTrash(article.id)"*ngIf="article.deletedAt!==null">U/T</button>
+        </td>
+        <td>{{ article.nom }}</td>
+        <td>{{ article.description }}</td>
+        <td>{{ article.prix }}</td>
+        <td>{{ article.quantiter }}</td>
+        <td>{{ article.stock }}</td>
+        <td>{{ article.createdAt | date : "dd/mm/yyyy" }}</td>
+        <td>{{ article.deletedAt | date : "dd/mm/yyyy" }}</td>
+        
+      </tr>
+    </tbody>
+
+  </table>
 </fieldset>
