@@ -5,33 +5,30 @@
 <table>
   <thead>
     <th>*Action*</th>
-    <!-- <th>id</th> -->
-    <th>Photo</th>
+    <th>id</th>
+    <th>id_Photo</th>
     <th>Prenom</th>
     <th>Nom</th>
     <th>Birthday</th>
     <th>Adresse email</th>
-    <!-- <th>Role</th> -->
-    <!-- <th>EmailConfirmed</th> -->
-    <!-- <th>hashedPassword</th>
-    <th>Date de création</th> -->
-    <th></th>
   </thead>
-  <!-- finir pour les autre section -->
+
   <tbody>
     <tr *ngFor="let user of userList">
+
       <!-- je lui donne la route ici edit et l object user -->
-      <td><a [routerLink]="['edit',user.idUser]" >Modifier</a></td>
-      <!-- <td>{{ user.idUser }}</td> -->
+      <button><a [routerLink]="['add',user.idUser]" >Ajout</a></button>
+      <button><a [routerLink]="['edit',user.idUser]" >Modi</a></button>
+      <button><a [routerLink]="['delete',user.idUser]" >Sup</a></button>
+
+      <td>{{ user.idUser }}</td>
       <td>{{ user.idPhoto }}</td>
       <td>{{ user.firstName }}</td>
       <td>{{ user.lastName }}</td>
       <td>{{ user.birthday | date :'dd/mm/yyyy'}}</td>
       <td>{{ user.emailUser }}</td>
-      <!-- <td>{{ user.role }}</td> -->
-      <!-- <td>{{ user.emailConfirmed }}</td>
-      <td>{{ user.hashedPassword }}</td> -->
     </tr>
   </tbody>
+  
 </table>
 </fieldset>

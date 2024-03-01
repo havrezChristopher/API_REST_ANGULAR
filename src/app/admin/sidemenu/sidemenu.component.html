@@ -1,12 +1,12 @@
 <nav>
-  <a class="simple_link"[routerLink]="['/']">Retour Acceuil</a>
+  <a class="simple_link"[routerLink]="['/']">=== Retour Home ===</a><br>
   <ul id="sidemenu">
-    <li><a routerLink="dashboard">Dashboard</a></li>
+    <li><a routerLink="/admin">*** Dashboard ***</a></li><br>
     <li>*** User ***</li>
     <ul>
       <li><a [routerLink]="['user']">Liste des Utilisateurs</a></li>
+      <li><a [routerLink]="['user/add/:idUser']">Ajouter</a></li>
       <li><a [routerLink]="['user/edit/:idUser']">Modifier</a></li>
-      <!-- <li><a [routerLink]="['user/add']">Ajouter</a></li> -->
       <li><a [routerLink]="['user/delete/:id']">Suprimer</a></li>
     </ul>
     <li>*** Article ***</li>

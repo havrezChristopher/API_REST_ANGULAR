@@ -17,40 +17,45 @@ export class UEditComponent implements OnInit {
     idUser: 0,
     firstName: '',
     lastName: '',
-    role: '',
+    // role: '',
     emailUser: '',
-    password: '',
-    updatedAt: '',
-    createdAt: '',
-    deletedAt: null,
+    // password: '',
+    // updatedAt: '',
+    // createdAt: '',
+    // deletedAt: null,
   }
   
   constructor
     (
-      private activated: ActivatedRoute,
+      private activatedRoute: ActivatedRoute,
       private userService: UserServiceService
     ) { }
 
-ngOnInit(): void {
-  let idUser = this.activated.snapshot.paramMap.get('idUser');
-  console.log('Fucking id ==> ',idUser);
-
-  if (idUser) {
-    this.userService.getUser(idUser).subscribe(
-      user => {
-        console.log(user);
-        this.user = user
-        this.idUser=user.idUser
-      },
-      error => console.error('Erreur lors de la récupération de l’utilisateur:', error)
-    );
-  } else {
-    console.error('ID utilisateur est null');
-  }
-}
-
-
-  onSubmit(): void {
-    console.log(this.user)
-  }
+    ngOnInit(): void {
+      const idUser = this.activatedRoute.snapshot.paramMap.get('idUser');
+      if (idUser) {
+        this.userService.getUser(idUser).subscribe({
+          next: (user: IUser) => {
+            this.user = user;
+            this.idUser = user.idUser.toString(); // Assurez-vous de convertir correctement selon le type attendu
+          },
+          error: (error) => console.error('Erreur lors de la récupération de l’utilisateur:', error)
+        });
+      } else {
+        console.error('ID utilisateur est null');
+      }
+    }
+  // Envoie des information du formulaire !
+    updateUser(): void {
+      this.userService.updateUser(this.idUser, this.user).subscribe({
+        
+        
+        next: (response) => console.log('Mise à jour réussie', response),
+        error: (error) => console.error('Erreur lors de la mise à jour de l’utilisateur:', error)
+      });
+    }
+    
+    onSubmit(): void {
+      this.updateUser();
+    }
 }

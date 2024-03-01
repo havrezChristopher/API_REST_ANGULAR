@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiErrorService } from './_Subject/api-error.service';
-import { KonamiCodeService } from './_Secret/konami-code.service';
+// import { KonamiCodeService } from './_Secret/konami-code.service';
 
 @Component({
   selector: 'app-root',
@@ -14,13 +14,13 @@ export class AppComponent implements OnInit{
 
 constructor(
   private apiErrorServices:ApiErrorService,
-  private konamiCodeService: KonamiCodeService
+  // private konamiCodeService: KonamiCodeService
   
   ){}
 
 
   ngOnInit(): void {
-    this.konamiCodeService.listenKonamiCode();
+    // this.konamiCodeService.listenKonamiCode();
     this.apiErrorServices.apiError.subscribe(
       data => {
       this.message = data;

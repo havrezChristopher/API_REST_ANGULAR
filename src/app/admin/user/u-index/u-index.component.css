@@ -39,7 +39,10 @@ fieldset {
   a:hover {
     text-decoration: underline;
   }
-  
+  button{
+    width: 80px;
+
+  }
   /* Amélioration de la lisibilité sur les petits écrans */
   @media screen and (max-width: 600px) {
     table {

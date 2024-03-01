@@ -22,8 +22,8 @@ export class UserServiceService {
     return this.http.get<any>(`${this.API_URL}/user/${idUser}`)
   }
   
-  updateUser(idUser: any, userData: any): Observable<any> {
-    return this.http.patch<any>(`${this.API_URL}/user/${idUser}`, userData);
+  updateUser(idUser: any, user: any): Observable<any> {
+    return this.http.patch<any>(`${this.API_URL}/user/${idUser}`, user);
   }
   
   addUser(userData: any): Observable<any> {
