@@ -1,0 +1,58 @@
+    <!-- <form [formGroup]="signupForm" (ngSubmit)="signup()">
+        <div>
+          <label for="lastName">Nom:</label>
+          <input type="text" id="lastName" formControlName="lastName" />
+        </div>
+        <div>
+          <label for="firstName">Prenom:</label>
+          <input type="text" id="firstName" formControlName="firstName" />
+        </div>
+        <div>
+            <label for="gender">Genre:</label>
+            <input type="text" id="gender" formControlName="gender" />
+          </div>
+        <div>
+          <div>
+            <label for="dateDeNaissance">DateDeNaissance:</label>
+            <input
+              type="date"
+              id="dateDeNaissance"
+              formControlName="dateDeNaissance"
+            />
+          </div>
+
+          <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" formControlName="emailUtilisateur" />
+
+      
+            <span *ngIf="signupForm.get('emailUtilisateur')?.errors?.['email']"
+              >Adresse Email Invalid</span
+            >
+          </div>
+        </div>
+
+        <div>
+          <label for="password">Mots De Passe:</label>
+          <input type="password" id="password" formControlName="motsDePasse" />
+          <div
+            *ngIf="
+              signupForm.get('motsDePasse')?.invalid &&
+              signupForm.get('motsDePasse')?.touched
+            "
+          >
+            <span *ngIf="signupForm.get('motsDePasse')?.errors?.['required']"
+              >Password is required.</span
+            >
+          </div>
+        </div>
+
+
+        <button type="submit" [disabled]="signupForm.invalid">Sign Up</button>
+        <div *ngIf="signupError">{{ signupError }}</div>
+
+        <div *ngIf="signupSuccess" class="success-message">
+          {{ signupSuccess }}
+        </div>
+      </form>
+       -->

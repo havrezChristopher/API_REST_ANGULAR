@@ -8,9 +8,8 @@ import { UDeleteComponent } from './u-delete/u-delete.component';
 const routes: Routes = [
   {path:'', component:UIndexComponent},
   {path:'add',component:UAddComponent},
-  // utilisation du paterne (:id) pour passer ou recuperer par l url
-  {path:'edit/:id',component:UEditComponent},
-  {path:'delete/:id',component:UDeleteComponent}
+  {path:'edit/:idUser',component:UEditComponent},
+  {path:'delete/:idUser',component:UDeleteComponent}
 ];
 
 @NgModule({

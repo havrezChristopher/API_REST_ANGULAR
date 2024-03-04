@@ -1,22 +1,28 @@
 <nav>
-  <a class="simple_link"[routerLink]="['/']">Retour Acceuil</a>
+  <a class="simple_link"[routerLink]="['/']">=== Retour Home ===</a><br>
   <ul id="sidemenu">
-    <li><a routerLink="dashboard">Dashboard</a></li>
-    <li>> User</li>
+    <li><a routerLink="/admin">*** Dashboard ***</a></li><br>
+    <li>*** User ***</li>
     <ul>
-      <li><a [routerLink]="['user']">liste</a></li>
-      <li><a [routerLink]="['user/add']">Ajouter</a></li>
+      <li><a [routerLink]="['user']">Liste des Utilisateurs</a></li>
+      <li><a [routerLink]="['user/add/:idUser']">Ajouter</a></li>
+      <li><a [routerLink]="['user/edit/:idUser']">Modifier</a></li>
+      <li><a [routerLink]="['user/delete/:id']">Suprimer</a></li>
     </ul>
-    <li>> Article</li>
+    <li>*** Article ***</li>
     <ul>
-        <li><a [routerLink]="['article']">liste</a></li>
+        <li><a [routerLink]="['article']">liste Des Aticle</a></li>
         <li><a [routerLink]="['article/add']">Ajouter</a></li>
+        <li><a [routerLink]="['article/edit/:id']">Modifier</a></li>
+        <li><a [routerLink]="['article/delete/:id']">Suprimer</a></li>
+      
     </ul>
-    <li>>Evenements</li>
+    <li>*** Evenements ***</li>
     <ul>
-      <li><a href="#">1Lien ...</a></li>
-      <li><a href="#">2Lien ...</a></li>
-      <li><a href="#">3Lien ...</a></li>
+      <li><a [routerLink]="['evenement']">liste Des Evenement</a></li>
+        <li><a [routerLink]="['evenement/add']">Ajouter</a></li>
+        <li><a [routerLink]="['evenement/edit/:id']">Modifier</a></li>
+        <li><a [routerLink]="['evenement/delete/:id']">Suprimer</a></li>
     </ul>
   </ul>
 </nav>

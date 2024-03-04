@@ -1,1 +1,11 @@
+<div class="message-server-Erreur" [class.error]="display">
+    
+
+    <fieldset>
+        <legend>*** Message Erreur *** </legend>
+        {{message}}
+    </fieldset>
+    <button (click)="clearMessage()">Fermer</button>
+</div>
+
 <router-outlet></router-outlet>

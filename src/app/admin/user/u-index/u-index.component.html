@@ -1,1 +1,34 @@
-<p>u-index works!</p>
+<fieldset>
+  <legend><h3>Utilisateurs</h3></legend>
+ 
+
+<table>
+  <thead>
+    <th>*Action*</th>
+    <th>id</th>
+    <th>id_Photo</th>
+    <th>Prenom</th>
+    <th>Nom</th>
+    <th>Birthday</th>
+    <th>Adresse email</th>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let user of userList">
+
+      <!-- je lui donne la route ici edit et l object user -->
+      <button><a [routerLink]="['add',user.idUser]" >Ajout</a></button>
+      <button><a [routerLink]="['edit',user.idUser]" >Modi</a></button>
+      <button><a [routerLink]="['delete',user.idUser]" >Sup</a></button>
+
+      <td>{{ user.idUser }}</td>
+      <td>{{ user.idPhoto }}</td>
+      <td>{{ user.firstName }}</td>
+      <td>{{ user.lastName }}</td>
+      <td>{{ user.birthday | date :'dd/mm/yyyy'}}</td>
+      <td>{{ user.emailUser }}</td>
+    </tr>
+  </tbody>
+  
+</table>
+</fieldset>

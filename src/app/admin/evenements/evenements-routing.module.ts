@@ -8,7 +8,6 @@ import { EDeleteComponent } from './e-delete/e-delete.component';
 const routes: Routes = [
   {path:'', component:EIndexComponent},
   {path:'add',component:EAddComponent},
-  // utilisation du paterne (:id) pour passer ou recuperer par l url
   {path:'edit/:id',component:EEditComponent},
   {path:'delete/:id',component:EDeleteComponent}
 ];

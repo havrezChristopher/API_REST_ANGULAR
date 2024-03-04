@@ -1,0 +1,32 @@
+.footer {
+    background-color: #000000;
+    overflow: hidden;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.8); /* Ombrage sombre */
+    opacity: 0.9; /* Opacité adaptée */
+}
+
+.footer a {
+    color: white;
+    border-radius: 15px;
+    text-decoration: none;
+    padding: 8px 16px;
+}
+
+.footer a:hover {
+    background-color: #00bfff;
+    color: #000000;
+}
+
+.footer-text {
+    margin-top: 20px;
+}
+
+.footer-text a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin-right: 10px;
+}
