@@ -19,6 +19,8 @@ import { TokenInterceptorProvider } from './_helper/token-interceptor.intercepto
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
+    
+
   ],
   providers: [TokenInterceptorProvider],
   bootstrap: [AppComponent]

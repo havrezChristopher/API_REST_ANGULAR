@@ -1,3 +1,6 @@
+<!-- Template Forms -->
+
+
 <form #loginForm="ngForm" (ngSubmit)="Connection(loginForm)">
   <label for="emailUser">Email:</label>
   <input type="email" id="emailUser" name="emailUser" [(ngModel)]="emailUser" required>
@@ -5,13 +8,7 @@
   <label for="password">Password:</label>
   <input type="password" id="password" name="password" [(ngModel)]="password" required>
 
+    *ngIf="expression"
  
 </form>
-<!-- <form [[formGroup]="MonForm"] (ngSubmit)="OnSubmit()">
-  <div>
-    <label for="emailUser">Adresse Email</label>
-    <input id="emailUser" type="email" formControlName="emailUser">
-  </div>
 
-  <button type="submit">Connection</button>
-</form> -->

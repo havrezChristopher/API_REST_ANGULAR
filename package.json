@@ -23,6 +23,7 @@
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
+    "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
     "emailjs": "^4.0.3",
     "jwt-decode": "^4.0.0",

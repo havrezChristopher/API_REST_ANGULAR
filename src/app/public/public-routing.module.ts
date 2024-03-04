@@ -4,7 +4,6 @@ import { HomeComponent } from './home/home.component';
 import { ArticleComponent } from './article/article.component';
 import { EvenementsComponent } from './evenements/evenements.component'
 import { PlayoutComponent } from './playout/playout.component';
-import { RegisterComponent } from './register/register.component';
 import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
@@ -19,7 +18,6 @@ const routes: Routes = [
       { path: 'article', component: ArticleComponent },
       { path: 'evenements', component: EvenementsComponent },
       { path: 'contact', component: ContactComponent },
-      { path: 'register', component: RegisterComponent },
 
     ]
   }
