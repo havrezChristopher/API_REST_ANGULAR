@@ -1,62 +1,40 @@
-<!-- Template Forms -->
 
-<legend>Register</legend>
-
-
-<!-- Bootstrap -->
-<!-- ajout du container pour les marge auto et (mt-5= margintop=5) -->
-<div class="container mt-5">
-  <div class="card">
-    <div class="card-header text-white bg-info">S'enregistrer</div>
-    <div class="card-body">
-      <!-- ngForm est une balise comprise dans notre formsModule -->
-      <!-- novalidate pour ne pas rentrer en conflit avec required -->
-      <form novalidate (ngSubmit)="saveData(registerForm)" #registerForm="ngForm">
-        <!-- pour utiliser les ligne  -->
-        <div class="form-row">
-          <!-- col=colone ==> mb=margebutton-3 -->
-          <div class="col-md-6 mb-3">
-            <label for="lastName">Nom</label>
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Nom"
-              [(ngModel)]="user.lastName"
-              name="lastName" 
-              required 
-              #lastNameVar="ngModel"
-              [ngClass]="{'is-invalid':lastNameVar.touched && !lastNameVar.valid }"
-            />
-          </div>
-
-          <div class="col-md-6 mb-3">
-            <label for="firstName">Prenom</label>
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Prenom"
-              [(ngModel)]="user.firstName"
-              name="firstName"
-            />
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="col-md-6 mb-3">
-            <label for="emailUser">Adresse Email</label>
-            <input
-              type="email"
-              class="form-control"
-              placeholder="Adresse Email"
-              [(ngModel)]="user.emailUser"
-              name="emailUser"
-            />
-          </div>
-        </div>
-        <!-- alligner a droite  -->
-        <div class="text-right">
-          <button class="btn btn-info" type="submit">Sauvegarder</button>
-        </div>
-      </form>
-    </div>
+<div class="container-body">
+<div class="form-container">
+  <div class="logo-container">
+    <h2>S'enregistrer</h2>
+    <img src="../../../assets/images/logo/8.webp" alt="Company Logo">
   </div>
+  <form [formGroup]="form">
+    <div class="form-group">
+
+        <input type="text" formControlName="name" placeholder="Name"[ngClass]="{ error: nameControl.invalid && nameControl.touched }"
+            minlength="2" maxlength="15">
+        <div *ngIf="nameControl.touched && nameControl.errors">
+            <p *ngIf="nameControl.errors['required']">Le champ est requis.</p>
+            <p *ngIf="nameControl.errors['minlength']">Le nom doit faire minimum 2 caractères.</p>
+            <p *ngIf="nameControl.errors['maxlength']">Le nom doit faire maximum 15 caractères.</p>
+        </div>
+    </div>
+    <div class="form-group">
+      <input type="text" placeholder="Prenom" required>
+    </div>
+    <div class="form-group">
+      <input type="email" placeholder="Email Address" required>
+    </div>
+    <div class="form-group">
+      <input type="password" placeholder="Password" required>
+      <!-- <p class="input-hint">Votre Mots de passe dois contenir A-Z, a-z, 0-9 </p> -->
+    </div>
+    <div class="form-group">
+      <input type="password" placeholder="Confirme-Password" required>
+    </div>
+    <div class="form-group">
+      <button type="submit">Register</button>
+    </div>
+    <div class="form-footer">
+      <p>Vous étent déja enregistrer<a href="#">Connection</a></p>
+    </div>
+  </form>
+</div>
 </div>

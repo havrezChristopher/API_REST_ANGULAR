@@ -4,5 +4,6 @@ export class User {
      firstName : string | undefined ;
      lastName : string | undefined ;
      emailUser : string | undefined;
+     sendCatalog: boolean | undefined;
 
 }
