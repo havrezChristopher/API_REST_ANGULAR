@@ -1,6 +1,43 @@
-<div class="map">
 
-<iframe width="50%" height="400" frameborder="100" scrolling="no" marginheight="0" marginwidth="0"
-src="https://www.openstreetmap.org/export/embed.html?bbox=-0.1455841064453125%2C51.4990805461804%2C-0.1256256103515625%2C51.507350075843814&amp;layer=mapnik"
-style="border: 1px solid rgb(255, 0, 0)"></iframe>
+<app-nav-barre-playout></app-nav-barre-playout>
+<div class="image-top">
+  <img src="../../../assets/images/Backgrund/contact-bg.jpg" alt="Backgrund">
 </div>
+<div class="contact-container">
+  <div class="contact-form">
+    <h2>NOUS CONTACTER</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisquam illo praesentium sequi in cum, beatae maiores quae qui.</p>
+    <form action="/send-message" method="post">
+      <input type="text" name="fullname" placeholder="Full name" required>
+      <input type="email" name="email" placeholder="E-mail address" required>
+      <textarea name="message" placeholder="Message" required></textarea>
+      <button type="submit">SEND MESSAGE</button>
+    </form>
+  </div>
+  <div class="contact-info">
+    <h4>NOUS ECRIRE</h4>
+    <p>admin@domain.com</p>
+    <h4>TELEPHONE</h4>
+    <p>+32494/24-31-39</p>
+    <h4>ADRESSE</h4>
+    <p>1234 Altschul, New York, NY 10027-0000</p>
+    <h4>RESEAUX SOCIAUX</h4>
+    <!-- Ici, vous pouvez intégrer vos propres liens vers les réseaux sociaux -->
+    <a href="http://twitter.com/yourprofile"><img src="logo/twitter-icon.png" alt="Twitter"></a>
+    <a href="http://facebook.com/yourprofile"><img src="facebook-icon.png" alt="Facebook"></a>
+    <a href="http://instagram.com/yourprofile"><img src="instagram-icon.png" alt="Instagram"></a>
+  </div>
+</div>
+<div class="map">
+  <iframe
+    width="100%"
+    height="400"
+    frameborder="100"
+    scrolling="no"
+    marginheight="0"
+    marginwidth="0"
+    src="https://www.openstreetmap.org/export/embed.html?bbox=-0.1455841064453125%2C51.4990805461804%2C-0.1256256103515625%2C51.507350075843814&amp;layer=mapnik"
+
+  ></iframe>
+</div>
+

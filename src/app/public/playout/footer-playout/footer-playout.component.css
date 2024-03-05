@@ -1,32 +1,69 @@
 .footer {
-    background-color: #000000;
-    overflow: hidden;
-    border-radius: 10px;
-    color: white;
+    background-color: #010e25; /* Fond semi-transparent sur le dégradé */
+    color: #ffffff; /* Texte en blanc */
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+    flex-wrap: wrap; /* S'assure que les colonnes se positionnent bien sur les petits écrans */
+  }
+  
+  .footer-col h4 {
+    color: #2575fc; /* Bleu clair pour les titres */
+    margin-bottom: 0.5em;
+  }
+  
+  .footer-col {
+    max-width: 200px;
+    margin-bottom: 1em;
+  }
+  
+  .footer-col p, .footer-col a {
+    color: #a8d1ff; /* Bleu plus clair pour le texte */
+    line-height: 1.6; /* Espacement des lignes pour une meilleure lisibilité */
+  }
+  
+  .footer-col a {
+    text-decoration: none; /* Pas de soulignement des liens */
+    display: inline-block; /* Pour appliquer la marge */
+    margin-bottom: 0.5em;
+  }
+  
+  .footer-col a:hover {
+    color: #ffffff; /* Couleur blanche au survol pour contraste */
+  }
+  
+  .footer-bottom {
     text-align: center;
-    padding: 20px;
-    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.8); /* Ombrage sombre */
-    opacity: 0.9; /* Opacité adaptée */
-}
-
-.footer a {
-    color: white;
-    border-radius: 15px;
-    text-decoration: none;
-    padding: 8px 16px;
-}
-
-.footer a:hover {
-    background-color: #00bfff;
-    color: #000000;
-}
-
-.footer-text {
-    margin-top: 20px;
-}
-
-.footer-text a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    margin-right: 10px;
-}
+    color: #a8d1ff; /* Bleu plus clair pour le texte du bas */
+    border-top: 1px solid #2575fc; /* Ligne de séparation bleue claire */
+    padding-top: 1em;
+    width: 100%; /* Assure que le footer bottom s'étend sur toute la largeur */
+  }
+  
+  .footer-bottom a {
+    color: #a8d1ff; /* Même couleur bleue claire pour les liens */
+    text-decoration: none; /* Pas de soulignement */
+    margin-left: 1em;
+  }
+  
+  .footer-bottom a:hover {
+    color: #ffffff; /* Blanc au survol */
+  }
+  
+  /* Media query pour ajuster le layout sur les petits écrans */
+  @media (max-width: 768px) {
+    .footer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-col {
+      width: 100%; /* Chaque colonne prend toute la largeur sur les petits écrans */
+      max-width: none;
+      margin-bottom: 1em;
+    }
+  
+    .footer-bottom {
+      margin-top: 2em; /* Ajoute de l'espace entre les colonnes et le texte du bas */
+    }
+  }

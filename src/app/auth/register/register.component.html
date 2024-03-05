@@ -1,45 +1,112 @@
-<a routerLink="/">home</a>
-    <a routerLink="article">Article</a>
-    <a routerLink="evenements">Evenements</a>
-    <a routerLink="/contact">Contact</a> 
-<div class="container-body">
-
-<div class="form-container">
-  <div class="logo-container">
-    <h3>S'enregistrer</h3>
-    <img src="../../../assets/images/logo/8.webp" alt="Company Logo">
+<div class="navbar">
+  <a routerLink="/"
+    ><img src="../../../assets/images/logo Duxpok.webp" alt=""
+  /></a>
+  <!-- Logo ou marque ici -->
+  <div>
+    <a routerLink="/article">Produits</a>
+    <a routerLink="/evenements">Evenements</a>
+    <a routerLink="/contact">Contact</a>
+    <a routerLink="/auth/login">Connexion</a>
+    <a routerLink="/auth/register">S'enregistrer</a>
   </div>
-  <form [formGroup]="form">
-    <div class="form-group">
-
-        <input type="text" formControlName="name" placeholder="Name"[ngClass]="{ error: nameControl.invalid && nameControl.touched }"
-            minlength="2" maxlength="15">
+</div>
+<div class="container-body">
+  <div class="form-container">
+    <h2>S'enregistrer</h2>
+    <div class="logo-container">
+      <img src="../../../assets/images/logo/8.webp" alt="Company Logo" />
+    </div>
+    <form [formGroup]="form">
+      <div class="form-group">
+        <input
+          type="text"
+          formControlName="name"
+          placeholder="Name"
+          [ngClass]="{ error: nameControl.invalid && nameControl.touched }"
+          minlength="2"
+          maxlength="15"
+        />
         <div *ngIf="nameControl.touched && nameControl.errors">
-            <p *ngIf="nameControl.errors['required']">Le champ est requis.</p>
-            <p *ngIf="nameControl.errors['minlength']">Le nom doit faire minimum 2 caractères.</p>
-            <p *ngIf="nameControl.errors['maxlength']">Le nom doit faire maximum 15 caractères.</p>
+          <p *ngIf="nameControl.errors['required']">Le champ est requis.</p>
+          <p *ngIf="nameControl.errors['minlength']">
+            Le nom doit faire minimum 2 caractères.
+          </p>
+          <p *ngIf="nameControl.errors['maxlength']">
+            Le nom doit faire maximum 15 caractères.
+          </p>
         </div>
-    </div>
-    <div class="form-group">
-      <input type="text" placeholder="Prenom" required>
-    </div>
-    <div class="form-group">
-      <input type="email" placeholder="Email Address" required>
-    </div>
-    <div class="form-group">
-      <input type="password" placeholder="Password" required>
-      <!-- <p class="input-hint">Votre Mots de passe dois contenir A-Z, a-z, 0-9 </p> -->
-    </div>
-    <div class="form-group">
-      <input type="password" placeholder="Confirme-Password" required>
-    </div>
-    <div class="form-group">
-      <button type="submit">Register</button>
-    </div>
-    <div class="form-footer">
-      <p>Vous étent déja enregistrer<a href="/auth/login">Connection</a></p>
-    </div>
-  </form>
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="Prenom" required />
+      </div>
+      <div class="form-group">
+        <input type="email" placeholder="Email Address" required />
+      </div>
+      <div class="form-group">
+        <input type="password" placeholder="Password" required />
+        <!-- <p class="input-hint">Votre Mots de passe dois contenir A-Z, a-z, 0-9 </p> -->
+      </div>
+      <div class="form-group">
+        <button type="submit">Envoyer</button>
+      </div>
+      <div class="form-footer">
+        <p>Vous étent déja enregistrer<a href="/auth/login">Connection</a></p>
+      </div>
+    </form>
+  </div>
 </div>
+<div class="footer">
+  <div class="footer-col">
+    <h4>À Propos</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem, unde
+      facilis possimus, dolores nisi eos modi rem error sequi adipisci facere ex
+      asperiores voluptas fugit veritatis consequuntur? Eaque ducimus, dolorem
+      itaque qui fugit animi, magni saepe, aperiam rerum obcaecati cumque!
+    </p>
+  </div>
+  <div class="footer-col">
+    <h4>CONTACT INFO</h4>
+    <p>
+      <span class="footer-icon">&#x1F4CD;</span> 1234 Altschul, Los Angeles, CA
+    </p>
+    <p><span class="footer-icon">&#x260E;</span> +1 987 654 3210</p>
+    <a href="mailto:admin@domain.com"
+      ><span class="footer-icon">&#x2709;</span> admin@domain.com</a
+    >
+  </div>
+  <div class="footer-col">
+    <h4>CONTACT INFO</h4>
+    <p>
+      <span class="footer-icon">&#x1F4CD;</span> 1234 Altschul, Los Angeles, CA
+    </p>
+    <p><span class="footer-icon">&#x260E;</span> +1 987 654 3210</p>
+    <a href="mailto:admin@domain.com"
+      ><span class="footer-icon">&#x2709;</span> admin@domain.com</a
+    >
+    <h4>BlaBla Titre</h4>
+    <p>
+      <span class="footer-icon">&#x1F4CD;</span> 1234 Altschul, Los Angeles, CA
+    </p>
+    <p><span class="footer-icon">&#x260E;</span> +1 987 654 3210</p>
+    <a href="mailto:admin@domain.com"
+      ><span class="footer-icon">&#x2709;</span> admin@domain.com</a
+    >
+  </div>
+  <div class="footer-col">
+    <h4>OPENING HOURS</h4>
+    <p>MONDAY - THURSDAY 10:00 AM - 11:00 PM</p>
+    <p>MONDAY - THURSDAY 10:00 AM - 11:00 PM</p>
+    <p>MONDAY - THURSDAY 10:00 AM - 11:00 PM</p>
+    <p>MONDAY - THURSDAY 10:00 AM - 11:00 PM</p>
+    <p>FRIDAY - SUNDAY 12:00 AM - 03:00 AM</p>
+  </div>
 </div>
-
+<div class="footer-bottom">
+  © 2024 MonApp. Tous droits réservés.
+  <p>&copy; 2014 Copyright Christopher. All rights reserved.</p>
+  <a href="https://github.com/havrezChristopher">Github</a>
+</div>

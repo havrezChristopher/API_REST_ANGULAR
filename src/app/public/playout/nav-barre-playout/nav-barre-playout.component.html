@@ -1,10 +1,14 @@
- <nav>
-  <div class="links-container">
-    <a routerLink="/"><mat-icon>home</mat-icon></a>
-    <a routerLink="article">Article</a>
-    <a routerLink="evenements">Evenements</a>
-    <a routerLink="/contact">Contact</a> 
 
+  <div class="navbar">
+    <a routerLink="/" ><img src="../../../assets/images/logo Duxpok.webp" alt=""></a> <!-- Logo ou marque ici -->
+    <div>
+      <a routerLink="/article">Produits</a>
+      <a routerLink="/evenements">Evenements</a>
+      <a routerLink="/contact">Contact</a> 
+      <a routerLink="/auth/login">Connexion</a> 
+      <a routerLink="/auth/register">S'enregistrer</a> 
+    </div>
+  </div>
     <!-- Liens Quand l'utilisateur est loger -->
      <ng-container *ngIf="isLoggedIn">
       <mat-menu #userMenu="matMenu">
@@ -36,13 +40,13 @@
 
 
     <!-- Liens Quand l'utilisateur n'est pas loger -->
-    <ng-container *ngIf="!isLoggedIn">
+    <!-- <ng-container *ngIf="!isLoggedIn">
       <div class="btn-login">
       <a routerLink="auth/login">Connexion</a>
     </div>
       <div class="btn-signup">
       <a routerLink="auth/register">S'enregistrer</a> 
     </div>
-    </ng-container>
-  </div>
-</nav> 
+    </ng-container> -->
+
+

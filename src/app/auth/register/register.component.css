@@ -1,97 +1,220 @@
-.container-body{
-    /* Définissez votre dégradé ici */
-    background: linear-gradient(to right, #070707, #2575fc);
-    /* S'assurer que l'arrière-plan couvre toute la page */
-    min-height: 100vh; 
-    background-attachment: fixed;
-    /* Ajouter pour que le dégradé s'adapte à toute la page même avec scrolling */
-    background-repeat: no-repeat;
-    background-size: cover;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Ajouté pour centrer les éléments verticalement */
+  padding: 1em 2em;
+  position: fixed;
+  width: 100%;
+  height:65px;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar img {
+  height: 50px; /* Ajustez en fonction de la taille désirée */
+  border-radius: 50%;
+  cursor: pointer; 
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1em;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #002564;
+
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1em;
   }
-  .error {
-    color: red;
+  
+  .navbar a {
+    margin: 0.5em 0;
   }
+}
+/* Effectdefondu */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.container-body {
+  animation: fadeIn 1s ease-out;
+}
+/* Effect Zomme */
+/* @keyframes zoomIn {
+  from { transform: scale(0.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.container-body {
+  animation: zoomIn 0.5s ease-out;
+} */
+/* glissement */
+@keyframes slideInFromLeft {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+.container-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Dégradé d'arrière-plan */
+  background: linear-gradient(0deg, #ffffffad, #2574fce1);
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .logo-container {
-  text-align: center; /* Centre le logo horizontalement */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
 }
 
 .logo-container img {
-  max-width: 10px; /* Ajustez la taille comme vous le souhaitez */
-  height: auto; /* Garde le ratio d'aspect de l'image */
+  max-width: 150px;
+  height: auto;
 }
 
 .form-container {
   background: rgba(255, 255, 255, 0.267);
-    padding: 2em;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgb(1, 162, 255);
-    max-width: 400px;
-    margin: auto;
-    
-  }
-  
-  h2 {
-    text-align: center;
-    margin-bottom: 1em;
-  }
-  
-  .form-group {
-    margin-bottom: 1em;
-  }
-  
-  .form-group input {
-    width: 100%;
-    padding: 0.75em;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-  }
-  
-  .form-group button {
-    width: 100%;
-    padding: 0.75em;
-    border: none;
-    border-radius: 5px;
-    background-color: #5e72e4;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .form-group button:hover {
-    background-color: #324cdd;
-  }
-  
-  .form-footer {
-    text-align: center;
-    margin-top: 1em;
-  }
-  
-  .form-footer a {
-    color: #00bcf5;
-    text-decoration: none;
-  }
-  
-  .form-footer a:hover {
-    text-decoration: underline;
-  }
-  
-  .input-hint {
-    font-size: 0.8em;
-    color: #6c757d;
-    margin-top: 0.25em;
-  }
-  
-  /* Vous devrez ajuster le placement du formulaire selon votre mise en page globale. */
-  
-  body {
-    display: flex;
-    justify-content: center;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgb(1, 162, 255);
+  max-width: 400px;
+  width: 100%; /* Utilisez 100% du conteneur flex pour centrer le formulaire */
+  box-sizing: border-box; /* Incluez le padding et la bordure dans la largeur */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.form-group input,
+.form-group button {
+  width: 100%;
+  padding: 0.75em;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form-group input {
+  border: 1px solid #ccc;
+}
+
+.form-group button {
+  border: none;
+  background-color: #5e72e4;
+  color: white;
+  cursor: pointer;
+}
+
+.form-group button:hover {
+  background-color: #324cdd;
+}
+
+.form-footer {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.form-footer a {
+  color: #00bcf5;
+  text-decoration: none;
+}
+
+.form-footer a:hover {
+  text-decoration: underline;
+}
+
+.input-hint {
+  font-size: 0.8em;
+  color: #6c757d;
+  margin-top: 0.25em;
+}
+.footer {
+  background-color: #010e25; /* Fond semi-transparent sur le dégradé */
+  color: #ffffff; /* Texte en blanc */
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+  flex-wrap: wrap; /* S'assure que les colonnes se positionnent bien sur les petits écrans */
+}
+
+.footer-col h4 {
+  color: #2575fc; /* Bleu clair pour les titres */
+  margin-bottom: 0.5em;
+}
+
+.footer-col {
+  max-width: 200px;
+  margin-bottom: 1em;
+}
+
+.footer-col p, .footer-col a {
+  color: #a8d1ff; /* Bleu plus clair pour le texte */
+  line-height: 1.6; /* Espacement des lignes pour une meilleure lisibilité */
+}
+
+.footer-col a {
+  text-decoration: none; /* Pas de soulignement des liens */
+  display: inline-block; /* Pour appliquer la marge */
+  margin-bottom: 0.5em;
+}
+
+.footer-col a:hover {
+  color: #ffffff; /* Couleur blanche au survol pour contraste */
+}
+
+.footer-bottom {
+  text-align: center;
+  color: #a8d1ff; /* Bleu plus clair pour le texte du bas */
+  border-top: 1px solid #2575fc; /* Ligne de séparation bleue claire */
+  padding-top: 1em;
+  width: 100%; /* Assure que le footer bottom s'étend sur toute la largeur */
+}
+
+.footer-bottom a {
+  color: #a8d1ff; /* Même couleur bleue claire pour les liens */
+  text-decoration: none; /* Pas de soulignement */
+  margin-left: 1em;
+}
+
+.footer-bottom a:hover {
+  color: #ffffff; /* Blanc au survol */
+}
+
+/* Media query pour ajuster le layout sur les petits écrans */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
     align-items: center;
-    min-height: 100vh;
-    background-color: #5e72e4;
-    color: #333;
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 2em;
   }
+
+  .footer-col {
+    width: 100%; /* Chaque colonne prend toute la largeur sur les petits écrans */
+    max-width: none;
+    margin-bottom: 1em;
+  }
+
+  .footer-bottom {
+    margin-top: 2em; /* Ajoute de l'espace entre les colonnes et le texte du bas */
+  }
+}
