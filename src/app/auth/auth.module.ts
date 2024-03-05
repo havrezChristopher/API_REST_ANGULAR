@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
-
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 
 
@@ -14,6 +14,8 @@ import { RegisterComponent } from './register/register.component';
   declarations: [
     LoginComponent,
     RegisterComponent,
+    ForgotPasswordComponent,
+
 
     
     // RegisterComponent

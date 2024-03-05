@@ -1,8 +1,12 @@
-
+<a routerLink="/">home</a>
+    <a routerLink="article">Article</a>
+    <a routerLink="evenements">Evenements</a>
+    <a routerLink="/contact">Contact</a> 
 <div class="container-body">
+
 <div class="form-container">
   <div class="logo-container">
-    <h2>S'enregistrer</h2>
+    <h3>S'enregistrer</h3>
     <img src="../../../assets/images/logo/8.webp" alt="Company Logo">
   </div>
   <form [formGroup]="form">
@@ -33,8 +37,9 @@
       <button type="submit">Register</button>
     </div>
     <div class="form-footer">
-      <p>Vous étent déja enregistrer<a href="#">Connection</a></p>
+      <p>Vous étent déja enregistrer<a href="/auth/login">Connection</a></p>
     </div>
   </form>
 </div>
 </div>
+

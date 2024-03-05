@@ -1,18 +1,12 @@
+
 nav {
-  /* border: solid red 2px; */
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-  overflow: hidden;
-}
-nav {
-  height: 75px;
   background-color: #242424;
-  box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.8); /* Ombrage sombre */
   /* News */
   display: flex;
   align-items: center;
   justify-content: flex-end; /* Aligner tout le contenu à droite si vous n'utilisez pas de conteneur spécifique pour les liens */
+  position: fixed;
+  width: 100%;
 }
 
 .links-container {

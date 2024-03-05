@@ -1,6 +1,6 @@
 .container-body{
     /* Définissez votre dégradé ici */
-    background: linear-gradient(to right, #2575fc, #2575fc);
+    background: linear-gradient(to right, #070707, #2575fc);
     /* S'assurer que l'arrière-plan couvre toute la page */
     min-height: 100vh; 
     background-attachment: fixed;
@@ -14,20 +14,21 @@
 
 .logo-container {
   text-align: center; /* Centre le logo horizontalement */
-  margin-bottom: 1em; /* Ajoute de l'espace en dessous du logo */
 }
 
 .logo-container img {
-  max-width: 150px; /* Ajustez la taille comme vous le souhaitez */
+  max-width: 10px; /* Ajustez la taille comme vous le souhaitez */
   height: auto; /* Garde le ratio d'aspect de l'image */
 }
+
 .form-container {
-    background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.267);
     padding: 2em;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgb(1, 162, 255);
     max-width: 400px;
     margin: auto;
+    
   }
   
   h2 {
@@ -67,7 +68,7 @@
   }
   
   .form-footer a {
-    color: #5e72e4;
+    color: #00bcf5;
     text-decoration: none;
   }
   

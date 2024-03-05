@@ -1,12 +1,12 @@
-<nav>
+ <nav>
   <div class="links-container">
     <a routerLink="/"><mat-icon>home</mat-icon></a>
     <a routerLink="article">Article</a>
     <a routerLink="evenements">Evenements</a>
-    <a routerLink="/contact">Contact</a>
+    <a routerLink="/contact">Contact</a> 
 
     <!-- Liens Quand l'utilisateur est loger -->
-    <ng-container *ngIf="isLoggedIn">
+     <ng-container *ngIf="isLoggedIn">
       <mat-menu #userMenu="matMenu">
         <button mat-menu-item [routerLink]="['utilisateur/:id']">
           <mat-icon>account_circle</mat-icon>
@@ -16,7 +16,7 @@
           <mat-icon>message</mat-icon>
           <span>Message</span>
           <span class="notification-badge">1</span> <!-- Nombre de notifications -->
-        </button>
+         </button>
         <button mat-menu-item [routerLink]="['utilisateur/:id/mesgroupe']">
           <mat-icon>group</mat-icon>
           <span>Group</span>
@@ -24,11 +24,11 @@
         <button mat-menu-item [routerLink]="['utilisateur/:id/paramettre']">
           <mat-icon>settings</mat-icon>
           <span>Paramètres</span>
-        </button>
+        </button> 
         <!-- gestionnaire d évenement sur matherial -->
-        <button mat-menu-item (click)="logout()">
-          <!-- <mat-icon>exit_to_app</mat-icon> -->
-          <span>Déconnexion</span>
+         <button mat-menu-item (click)="logout()"> 
+           <mat-icon>exit_to_app</mat-icon> 
+           <span>Déconnexion</span>
         </button>
       </mat-menu>
       
@@ -41,8 +41,8 @@
       <a routerLink="auth/login">Connexion</a>
     </div>
       <div class="btn-signup">
-      <a routerLink="/register">S'enregistrer</a> 
+      <a routerLink="auth/register">S'enregistrer</a> 
     </div>
     </ng-container>
   </div>
-</nav>
+</nav> 

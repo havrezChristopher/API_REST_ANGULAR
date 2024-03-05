@@ -1,14 +1,32 @@
 <!-- Template Forms -->
-
-
-<form #loginForm="ngForm" (ngSubmit)="Connection(loginForm)">
+<a routerLink="/">home</a>
+    <a routerLink="article">Article</a>
+    <a routerLink="evenements">Evenements</a>
+    <a routerLink="/contact">Contact</a> 
+<div class="container-body">
+  <div class="form-container">
+    <div class="logo-container">
+      <h2>Connections</h2>
+      <img src="../../../assets/images/logo/8.webp" alt="Company Logo">
+    </div>
+    <form #loginForm="ngForm" (ngSubmit)="Connection(loginForm)">
+      <div class="form-group">
   <label for="emailUser">Email:</label>
   <input type="email" id="emailUser" name="emailUser" [(ngModel)]="emailUser" required>
+</div>
+<div class="form-group">
 
+<div class="form-group">
   <label for="password">Password:</label>
   <input type="password" id="password" name="password" [(ngModel)]="password" required>
-
-    *ngIf="expression"
- 
+</div>
+  <div class="form-group">
+    <button type="submit">Connection</button>
+  </div>
+  <div class="form-footer">
+    <p>Mots de passe Oublier ? <a href="/auth/forgot-password">Forgot-password</a></p>
+  </div>
+</div>
 </form>
-
+</div>
+</div>
