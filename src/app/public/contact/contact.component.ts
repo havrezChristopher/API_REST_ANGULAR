@@ -31,16 +31,16 @@ export class ContactComponent implements AfterViewInit {
     gsap.from(this.contactForm.nativeElement, {
       scrollTrigger: {
         trigger: this.contactForm.nativeElement,
-        start: 'top center ',
+        start: 'top center  ',
         end: 'center center',
         toggleActions: 'play none none reverse',
-        markers: true // Utile pour le débogage, à enlever en production
+        // markers: true // Utile pour le débogage, à enlever en production
       },
       x: 600, // Commence à 100 pixels à droite de sa position d'origine
       opacity: 0, // Commence invisible
       duration: 1, // Durée de l'animation en secondes
       ease: 'power2.out', // Type d'assouplissement (easing)
-      delay: 1.2, // Retard avant le début de l'animation
+      delay: 0.6, // Retard avant le début de l'animation
     });
  
   }

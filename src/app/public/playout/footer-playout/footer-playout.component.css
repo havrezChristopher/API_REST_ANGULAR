@@ -34,14 +34,14 @@
   
   .footer-bottom {
     text-align: center;
-    color: #a8d1ff; /* Bleu plus clair pour le texte du bas */
+    color:  #002044; /* Bleu plus clair pour le texte du bas */
     border-top: 1px solid #2575fc; /* Ligne de séparation bleue claire */
     padding-top: 1em;
     width: 100%; /* Assure que le footer bottom s'étend sur toute la largeur */
   }
   
   .footer-bottom a {
-    color: #a8d1ff; /* Même couleur bleue claire pour les liens */
+    color: #002044; /* Même couleur bleue claire pour les liens */
     text-decoration: none; /* Pas de soulignement */
     margin-left: 1em;
   }
