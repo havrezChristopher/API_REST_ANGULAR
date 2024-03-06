@@ -1,6 +1,6 @@
 .image-top img {
   width: 100%;
-  max-height: 900px;
+  max-height: 800px;
 }
 
 .contact-container {
@@ -9,7 +9,7 @@
   align-items: center;
   padding: 2em;
   background: #ffffff; /* Changez cette couleur en fonction de votre palette */
-  height: 600px;
+  height: 850px;
 }
 
 .contact-form {
@@ -95,4 +95,5 @@
 .map {
   display: flex;
   justify-content: center;
+  height: 600px;
 }
